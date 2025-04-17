@@ -1,0 +1,3 @@
+[console_scripts]
+flight_controller = uav_control.flight_controller:main
+gps_follower = uav_control.gps_follower:main

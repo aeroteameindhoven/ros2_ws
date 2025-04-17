@@ -1,0 +1,3 @@
+[console_scripts]
+apriltag_detector = vtol_apriltag_control.apriltag_detector:main
+flight_controller = vtol_apriltag_control.flight_controller:main

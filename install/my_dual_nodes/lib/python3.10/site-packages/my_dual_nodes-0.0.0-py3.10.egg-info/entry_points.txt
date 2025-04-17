@@ -1,0 +1,3 @@
+[console_scripts]
+script1 = my_dual_nodes.script1:main
+script2 = my_dual_nodes.script2:main

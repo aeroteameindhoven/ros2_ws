@@ -1,0 +1,28 @@
+[1.923s] Invoking command in '/home/clara/ros2_ws/src/vtol_apriltag_control': PYTHONPATH=/home/clara/ros2_ws/src/build/vtol_apriltag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vtol_apriltag_control build --build-base /home/clara/ros2_ws/src/build/vtol_apriltag_control/build install --record /home/clara/ros2_ws/src/build/vtol_apriltag_control/install.log --single-version-externally-managed install_data
+[2.213s] running egg_info
+[2.230s] writing ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/PKG-INFO
+[2.231s] writing dependency_links to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/dependency_links.txt
+[2.231s] writing entry points to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/entry_points.txt
+[2.231s] writing requirements to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/requires.txt
+[2.231s] writing top-level names to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/top_level.txt
+[2.269s] reading manifest file '../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/SOURCES.txt'
+[2.270s] writing manifest file '../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/SOURCES.txt'
+[2.271s] running build
+[2.271s] running build_py
+[2.271s] copying vtol_apriltag_control/apriltag_detector.py -> /home/clara/ros2_ws/src/build/vtol_apriltag_control/build/lib/vtol_apriltag_control
+[2.271s] copying vtol_apriltag_control/flight_controller.py -> /home/clara/ros2_ws/src/build/vtol_apriltag_control/build/lib/vtol_apriltag_control
+[2.271s] copying vtol_apriltag_control/__init__.py -> /home/clara/ros2_ws/src/build/vtol_apriltag_control/build/lib/vtol_apriltag_control
+[2.272s] running install
+[2.277s] running install_lib
+[2.297s] running install_data
+[2.297s] copying resource/vtol_apriltag_control -> /home/clara/ros2_ws/src/install/vtol_apriltag_control/share/ament_index/resource_index/packages
+[2.298s] copying package.xml -> /home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control
+[2.298s] copying launch/vtol_control.launch.py -> /home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control
+[2.298s] running install_egg_info
+[2.318s] removing '/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages/vtol_apriltag_control-0.1.0-py3.10.egg-info' (and everything under it)
+[2.318s] Copying ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info to /home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages/vtol_apriltag_control-0.1.0-py3.10.egg-info
+[2.319s] running install_scripts
+[2.473s] Installing apriltag_detector script to /home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/vtol_apriltag_control
+[2.473s] Installing flight_controller script to /home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/vtol_apriltag_control
+[2.473s] writing list of installed files to '/home/clara/ros2_ws/src/build/vtol_apriltag_control/install.log'
+[2.550s] Invoked command in '/home/clara/ros2_ws/src/vtol_apriltag_control' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/vtol_apriltag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vtol_apriltag_control build --build-base /home/clara/ros2_ws/src/build/vtol_apriltag_control/build install --record /home/clara/ros2_ws/src/build/vtol_apriltag_control/install.log --single-version-externally-managed install_data

@@ -1,0 +1,4 @@
+[0.448s] Invoking command in '/home/clara/ros2_ws/src/build/uav_control': /usr/bin/cmake /home/clara/ros2_ws/src/uav_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/clara/ros2_ws/src/install/uav_control
+[0.864s] [0mCMake Error: The source directory "/home/clara/ros2_ws/src/uav_control" does not appear to contain CMakeLists.txt.
+[0.864s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[1.077s] Invoked command in '/home/clara/ros2_ws/src/build/uav_control' returned '1': /usr/bin/cmake /home/clara/ros2_ws/src/uav_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/clara/ros2_ws/src/install/uav_control

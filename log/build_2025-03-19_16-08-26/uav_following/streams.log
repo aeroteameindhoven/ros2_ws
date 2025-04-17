@@ -1,0 +1,28 @@
+[2.054s] Invoking command in '/home/clara/ros2_ws/src/uav_following': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_following/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_following/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_following build --build-base /home/clara/ros2_ws/src/build/uav_following/build install --record /home/clara/ros2_ws/src/build/uav_following/install.log --single-version-externally-managed install_data
+[2.468s] running egg_info
+[2.493s] writing ../build/uav_following/uav_following.egg-info/PKG-INFO
+[2.494s] writing dependency_links to ../build/uav_following/uav_following.egg-info/dependency_links.txt
+[2.494s] writing entry points to ../build/uav_following/uav_following.egg-info/entry_points.txt
+[2.495s] writing requirements to ../build/uav_following/uav_following.egg-info/requires.txt
+[2.495s] writing top-level names to ../build/uav_following/uav_following.egg-info/top_level.txt
+[2.550s] reading manifest file '../build/uav_following/uav_following.egg-info/SOURCES.txt'
+[2.552s] writing manifest file '../build/uav_following/uav_following.egg-info/SOURCES.txt'
+[2.552s] running build
+[2.552s] running build_py
+[2.553s] copying uav_following/pbvs_landing.py -> /home/clara/ros2_ws/src/build/uav_following/build/lib/uav_following
+[2.553s] copying uav_following/__init__.py -> /home/clara/ros2_ws/src/build/uav_following/build/lib/uav_following
+[2.553s] copying uav_following/gps_follower.py -> /home/clara/ros2_ws/src/build/uav_following/build/lib/uav_following
+[2.554s] running install
+[2.563s] running install_lib
+[2.590s] running install_data
+[2.590s] copying package.xml -> /home/clara/ros2_ws/src/install/uav_following/share/uav_following
+[2.591s] copying resource/uav_following -> /home/clara/ros2_ws/src/install/uav_following/share/ament_index/resource_index/packages
+[2.591s] copying launch/uav_following_launch.py -> /home/clara/ros2_ws/src/install/uav_following/share/uav_following/launch
+[2.591s] running install_egg_info
+[2.619s] removing '/home/clara/ros2_ws/src/install/uav_following/lib/python3.10/site-packages/uav_following-0.0.1-py3.10.egg-info' (and everything under it)
+[2.619s] Copying ../build/uav_following/uav_following.egg-info to /home/clara/ros2_ws/src/install/uav_following/lib/python3.10/site-packages/uav_following-0.0.1-py3.10.egg-info
+[2.620s] running install_scripts
+[2.815s] Installing gps_follower script to /home/clara/ros2_ws/src/install/uav_following/lib/uav_following
+[2.815s] Installing pbvs_landing script to /home/clara/ros2_ws/src/install/uav_following/lib/uav_following
+[2.815s] writing list of installed files to '/home/clara/ros2_ws/src/build/uav_following/install.log'
+[2.857s] Invoked command in '/home/clara/ros2_ws/src/uav_following' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_following/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_following/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_following build --build-base /home/clara/ros2_ws/src/build/uav_following/build install --record /home/clara/ros2_ws/src/build/uav_following/install.log --single-version-externally-managed install_data

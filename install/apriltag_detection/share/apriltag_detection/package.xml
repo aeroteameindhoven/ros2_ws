@@ -1,0 +1,22 @@
+<package format="3">
+  <name>apriltag_detection</name>
+  <version>0.0.1</version>
+  <description>AprilTag detection package for ROS 2</description>
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>Apache License 2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>pupil_apriltags</depend>
+  <depend>scipy</depend>
+  
+  <export>
+    <build_type>ament_python</build_type>
+</export>
+
+</package>
+
+
+

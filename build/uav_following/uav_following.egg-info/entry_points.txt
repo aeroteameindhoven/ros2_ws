@@ -1,0 +1,3 @@
+[console_scripts]
+gps_follower = uav_following.gps_follower:main
+pbvs_landing = uav_following.pbvs_landing:main

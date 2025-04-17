@@ -1,0 +1,28 @@
+[2.066s] Invoking command in '/home/clara/ros2_ws/src/my_dual_nodes': PYTHONPATH=/home/clara/ros2_ws/src/build/my_dual_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/my_dual_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_dual_nodes build --build-base /home/clara/ros2_ws/src/build/my_dual_nodes/build install --record /home/clara/ros2_ws/src/build/my_dual_nodes/install.log --single-version-externally-managed install_data
+[2.377s] running egg_info
+[2.398s] writing ../build/my_dual_nodes/my_dual_nodes.egg-info/PKG-INFO
+[2.399s] writing dependency_links to ../build/my_dual_nodes/my_dual_nodes.egg-info/dependency_links.txt
+[2.399s] writing entry points to ../build/my_dual_nodes/my_dual_nodes.egg-info/entry_points.txt
+[2.399s] writing requirements to ../build/my_dual_nodes/my_dual_nodes.egg-info/requires.txt
+[2.399s] writing top-level names to ../build/my_dual_nodes/my_dual_nodes.egg-info/top_level.txt
+[2.441s] reading manifest file '../build/my_dual_nodes/my_dual_nodes.egg-info/SOURCES.txt'
+[2.443s] writing manifest file '../build/my_dual_nodes/my_dual_nodes.egg-info/SOURCES.txt'
+[2.443s] running build
+[2.443s] running build_py
+[2.443s] copying my_dual_nodes/__init__.py -> /home/clara/ros2_ws/src/build/my_dual_nodes/build/lib/my_dual_nodes
+[2.443s] copying my_dual_nodes/script1.py -> /home/clara/ros2_ws/src/build/my_dual_nodes/build/lib/my_dual_nodes
+[2.443s] copying my_dual_nodes/script2.py -> /home/clara/ros2_ws/src/build/my_dual_nodes/build/lib/my_dual_nodes
+[2.444s] running install
+[2.450s] running install_lib
+[2.468s] running install_data
+[2.468s] copying resource/my_dual_nodes -> /home/clara/ros2_ws/src/install/my_dual_nodes/share/ament_index/resource_index/packages
+[2.468s] copying package.xml -> /home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes
+[2.469s] copying launch/dual_launch.py -> /home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/launch
+[2.469s] running install_egg_info
+[2.490s] removing '/home/clara/ros2_ws/src/install/my_dual_nodes/lib/python3.10/site-packages/my_dual_nodes-0.0.0-py3.10.egg-info' (and everything under it)
+[2.490s] Copying ../build/my_dual_nodes/my_dual_nodes.egg-info to /home/clara/ros2_ws/src/install/my_dual_nodes/lib/python3.10/site-packages/my_dual_nodes-0.0.0-py3.10.egg-info
+[2.491s] running install_scripts
+[2.641s] Installing script1 script to /home/clara/ros2_ws/src/install/my_dual_nodes/lib/my_dual_nodes
+[2.641s] Installing script2 script to /home/clara/ros2_ws/src/install/my_dual_nodes/lib/my_dual_nodes
+[2.641s] writing list of installed files to '/home/clara/ros2_ws/src/build/my_dual_nodes/install.log'
+[2.688s] Invoked command in '/home/clara/ros2_ws/src/my_dual_nodes' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/my_dual_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/my_dual_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_dual_nodes build --build-base /home/clara/ros2_ws/src/build/my_dual_nodes/build install --record /home/clara/ros2_ws/src/build/my_dual_nodes/install.log --single-version-externally-managed install_data

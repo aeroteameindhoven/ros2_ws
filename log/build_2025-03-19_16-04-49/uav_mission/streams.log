@@ -1,0 +1,39 @@
+[2.007s] Invoking command in '/home/clara/ros2_ws/src/uav_mission': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_mission build --build-base /home/clara/ros2_ws/src/build/uav_mission/build install --record /home/clara/ros2_ws/src/build/uav_mission/install.log --single-version-externally-managed install_data
+[2.316s] running egg_info
+[2.334s] creating ../build/uav_mission/uav_mission.egg-info
+[2.334s] writing ../build/uav_mission/uav_mission.egg-info/PKG-INFO
+[2.334s] writing dependency_links to ../build/uav_mission/uav_mission.egg-info/dependency_links.txt
+[2.335s] writing entry points to ../build/uav_mission/uav_mission.egg-info/entry_points.txt
+[2.335s] writing requirements to ../build/uav_mission/uav_mission.egg-info/requires.txt
+[2.335s] writing top-level names to ../build/uav_mission/uav_mission.egg-info/top_level.txt
+[2.335s] writing manifest file '../build/uav_mission/uav_mission.egg-info/SOURCES.txt'
+[2.372s] reading manifest file '../build/uav_mission/uav_mission.egg-info/SOURCES.txt'
+[2.373s] writing manifest file '../build/uav_mission/uav_mission.egg-info/SOURCES.txt'
+[2.373s] running build
+[2.373s] running build_py
+[2.373s] creating /home/clara/ros2_ws/src/build/uav_mission/build/lib/uav_mission
+[2.374s] copying uav_mission/apriltag_detector.py -> /home/clara/ros2_ws/src/build/uav_mission/build/lib/uav_mission
+[2.374s] copying uav_mission/__init__.py -> /home/clara/ros2_ws/src/build/uav_mission/build/lib/uav_mission
+[2.374s] copying uav_mission/gps_follower.py -> /home/clara/ros2_ws/src/build/uav_mission/build/lib/uav_mission
+[2.374s] running install
+[2.381s] running install_lib
+[2.401s] creating /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission
+[2.401s] copying /home/clara/ros2_ws/src/build/uav_mission/build/lib/uav_mission/apriltag_detector.py -> /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission
+[2.402s] copying /home/clara/ros2_ws/src/build/uav_mission/build/lib/uav_mission/__init__.py -> /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission
+[2.402s] copying /home/clara/ros2_ws/src/build/uav_mission/build/lib/uav_mission/gps_follower.py -> /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission
+[2.403s] byte-compiling /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission/apriltag_detector.py to apriltag_detector.cpython-310.pyc
+[2.404s] byte-compiling /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission/__init__.py to __init__.cpython-310.pyc
+[2.405s] byte-compiling /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission/gps_follower.py to gps_follower.cpython-310.pyc
+[2.406s] running install_data
+[2.406s] creating /home/clara/ros2_ws/src/install/uav_mission/share/ament_index/resource_index/packages
+[2.407s] copying resource/uav_mission -> /home/clara/ros2_ws/src/install/uav_mission/share/ament_index/resource_index/packages
+[2.407s] copying package.xml -> /home/clara/ros2_ws/src/install/uav_mission/share/uav_mission
+[2.407s] creating /home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/launch
+[2.407s] copying launch/uav_mission_launch.py -> /home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/launch
+[2.407s] running install_egg_info
+[2.436s] Copying ../build/uav_mission/uav_mission.egg-info to /home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages/uav_mission-0.0.1-py3.10.egg-info
+[2.437s] running install_scripts
+[2.652s] Installing apriltag_detector script to /home/clara/ros2_ws/src/install/uav_mission/lib/uav_mission
+[2.653s] Installing gps_follower script to /home/clara/ros2_ws/src/install/uav_mission/lib/uav_mission
+[2.653s] writing list of installed files to '/home/clara/ros2_ws/src/build/uav_mission/install.log'
+[2.721s] Invoked command in '/home/clara/ros2_ws/src/uav_mission' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_mission build --build-base /home/clara/ros2_ws/src/build/uav_mission/build install --record /home/clara/ros2_ws/src/build/uav_mission/install.log --single-version-externally-managed install_data

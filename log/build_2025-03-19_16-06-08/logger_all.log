@@ -1,0 +1,365 @@
+[0.150s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.150s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x71efbf06d420>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71efbf1ee470>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71efbf1ee470>>)
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.214s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/clara/ros2_ws/src'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extensions ['ignore', 'ignore_ament_install']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(apriltag_detection) by extension 'ros'
+[0.243s] DEBUG:colcon.colcon_core.package_identification:Package 'apriltag_detection' with type 'ros.ament_python' and name 'apriltag_detection'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(my_dual_nodes) by extension 'ros'
+[0.246s] DEBUG:colcon.colcon_core.package_identification:Package 'my_dual_nodes' with type 'ros.ament_python' and name 'my_dual_nodes'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'ros'
+[0.248s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'uav_control': Error(s) in package 'uav_control/package.xml':
+Error(s):
+- The manifest of package "uav_control" (with format version 3) must not contain the following tags: build_type
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extensions ['cmake', 'python']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'python'
+[0.248s] DEBUG:colcon.colcon_core.package_identification:Python package in 'uav_control' passes arguments to the setup() function which requires a different identification extension than 'python'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extensions ['python_setup_py']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(uav_control) by extension 'python_setup_py'
+[0.463s] DEBUG:colcon.colcon_core.package_identification:Package 'uav_control' with type 'python' and name 'uav_control'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extensions ['ignore', 'ignore_ament_install']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extension 'ignore'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extension 'ignore_ament_install'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extensions ['colcon_pkg']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extension 'colcon_pkg'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extensions ['colcon_meta']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extension 'colcon_meta'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extensions ['ros']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(uav_following) by extension 'ros'
+[0.465s] DEBUG:colcon.colcon_core.package_identification:Package 'uav_following' with type 'ros.ament_python' and name 'uav_following'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extensions ['ignore', 'ignore_ament_install']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extension 'ignore'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extension 'ignore_ament_install'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extensions ['colcon_pkg']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extension 'colcon_pkg'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extensions ['colcon_meta']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extension 'colcon_meta'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extensions ['ros']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(uav_mission) by extension 'ros'
+[0.467s] DEBUG:colcon.colcon_core.package_identification:Package 'uav_mission' with type 'ros.ament_python' and name 'uav_mission'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extensions ['ignore', 'ignore_ament_install']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extension 'ignore'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extension 'ignore_ament_install'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extensions ['colcon_pkg']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extension 'colcon_pkg'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extensions ['colcon_meta']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extension 'colcon_meta'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extensions ['ros']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(vtol_apriltag_control) by extension 'ros'
+[0.469s] DEBUG:colcon.colcon_core.package_identification:Package 'vtol_apriltag_control' with type 'ros.ament_python' and name 'vtol_apriltag_control'
+[0.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.493s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/clara/ros2_ws/install
+[0.494s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 297 installed packages in /opt/ros/humble
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'cmake_args' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'cmake_target' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'cmake_clean_cache' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'cmake_clean_first' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'cmake_force_configure' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'ament_cmake_args' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'catkin_cmake_args' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'apriltag_detection' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.533s] DEBUG:colcon.colcon_core.verb:Building package 'apriltag_detection' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/clara/ros2_ws/src/build/apriltag_detection', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/clara/ros2_ws/src/install/apriltag_detection', 'merge_install': False, 'path': '/home/clara/ros2_ws/src/apriltag_detection', 'symlink_install': False, 'test_result_base': None}
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'cmake_target' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'cmake_clean_cache' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'cmake_clean_first' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'cmake_force_configure' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'ament_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'catkin_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'my_dual_nodes' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.534s] DEBUG:colcon.colcon_core.verb:Building package 'my_dual_nodes' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/clara/ros2_ws/src/build/my_dual_nodes', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/clara/ros2_ws/src/install/my_dual_nodes', 'merge_install': False, 'path': '/home/clara/ros2_ws/src/my_dual_nodes', 'symlink_install': False, 'test_result_base': None}
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'cmake_target' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'uav_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.534s] DEBUG:colcon.colcon_core.verb:Building package 'uav_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/clara/ros2_ws/src/build/uav_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/clara/ros2_ws/src/install/uav_control', 'merge_install': False, 'path': '/home/clara/ros2_ws/src/uav_control', 'symlink_install': False, 'test_result_base': None}
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'cmake_target' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'cmake_clean_cache' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'cmake_clean_first' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'cmake_force_configure' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'ament_cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'catkin_cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_following' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.535s] DEBUG:colcon.colcon_core.verb:Building package 'uav_following' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/clara/ros2_ws/src/build/uav_following', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/clara/ros2_ws/src/install/uav_following', 'merge_install': False, 'path': '/home/clara/ros2_ws/src/uav_following', 'symlink_install': False, 'test_result_base': None}
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'cmake_target' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'cmake_clean_cache' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'cmake_clean_first' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'cmake_force_configure' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'ament_cmake_args' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'catkin_cmake_args' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'uav_mission' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.536s] DEBUG:colcon.colcon_core.verb:Building package 'uav_mission' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/clara/ros2_ws/src/build/uav_mission', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/clara/ros2_ws/src/install/uav_mission', 'merge_install': False, 'path': '/home/clara/ros2_ws/src/uav_mission', 'symlink_install': False, 'test_result_base': None}
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'cmake_args' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'cmake_target' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'vtol_apriltag_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.536s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_apriltag_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/clara/ros2_ws/src/build/vtol_apriltag_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/clara/ros2_ws/src/install/vtol_apriltag_control', 'merge_install': False, 'path': '/home/clara/ros2_ws/src/vtol_apriltag_control', 'symlink_install': False, 'test_result_base': None}
+[0.536s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.538s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.538s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/clara/ros2_ws/src/apriltag_detection' with build type 'ament_python'
+[0.538s] Level 1:colcon.colcon_core.shell:create_environment_hook('apriltag_detection', 'ament_prefix_path')
+[0.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/hook/ament_prefix_path.ps1'
+[0.541s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/hook/ament_prefix_path.dsv'
+[0.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/hook/ament_prefix_path.sh'
+[0.542s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.542s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.546s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/clara/ros2_ws/src/my_dual_nodes' with build type 'ament_python'
+[0.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_dual_nodes', 'ament_prefix_path')
+[0.546s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/hook/ament_prefix_path.ps1'
+[0.547s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/hook/ament_prefix_path.dsv'
+[0.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/hook/ament_prefix_path.sh'
+[0.548s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.548s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.551s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/clara/ros2_ws/src/uav_control'
+[0.551s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.551s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.554s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/clara/ros2_ws/src/uav_following' with build type 'ament_python'
+[0.554s] Level 1:colcon.colcon_core.shell:create_environment_hook('uav_following', 'ament_prefix_path')
+[0.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/hook/ament_prefix_path.ps1'
+[0.555s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/hook/ament_prefix_path.dsv'
+[0.556s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/hook/ament_prefix_path.sh'
+[0.556s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.556s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.559s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/clara/ros2_ws/src/uav_mission' with build type 'ament_python'
+[0.559s] Level 1:colcon.colcon_core.shell:create_environment_hook('uav_mission', 'ament_prefix_path')
+[0.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/hook/ament_prefix_path.ps1'
+[0.560s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/hook/ament_prefix_path.dsv'
+[0.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/hook/ament_prefix_path.sh'
+[0.561s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.561s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.564s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/clara/ros2_ws/src/vtol_apriltag_control' with build type 'ament_python'
+[0.564s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_apriltag_control', 'ament_prefix_path')
+[0.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/hook/ament_prefix_path.ps1'
+[0.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/hook/ament_prefix_path.dsv'
+[0.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/hook/ament_prefix_path.sh'
+[0.568s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.568s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.802s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/clara/ros2_ws/src/apriltag_detection'
+[0.802s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.802s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.999s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/clara/ros2_ws/src/my_dual_nodes'
+[1.000s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.000s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.392s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/clara/ros2_ws/src/uav_following'
+[1.393s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.393s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.637s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/clara/ros2_ws/src/uav_mission'
+[1.637s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.637s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.846s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/clara/ros2_ws/src/vtol_apriltag_control'
+[1.847s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.847s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.858s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/clara/ros2_ws/src/uav_control': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_control build --build-base /home/clara/ros2_ws/src/build/uav_control/build install --record /home/clara/ros2_ws/src/build/uav_control/install.log --single-version-externally-managed install_data
+[2.503s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/clara/ros2_ws/src/my_dual_nodes': PYTHONPATH=/home/clara/ros2_ws/src/build/my_dual_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/my_dual_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_dual_nodes build --build-base /home/clara/ros2_ws/src/build/my_dual_nodes/build install --record /home/clara/ros2_ws/src/build/my_dual_nodes/install.log --single-version-externally-managed install_data
+[2.508s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/clara/ros2_ws/src/uav_control' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_control build --build-base /home/clara/ros2_ws/src/build/uav_control/build install --record /home/clara/ros2_ws/src/build/uav_control/install.log --single-version-externally-managed install_data
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_control' for CMake module files
+[2.511s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_control' for CMake config files
+[2.511s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_control/lib'
+[2.512s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_control/bin'
+[2.512s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_control/lib/pkgconfig/uav_control.pc'
+[2.512s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_control/lib/python3.10/site-packages'
+[2.512s] Level 1:colcon.colcon_core.shell:create_environment_hook('uav_control', 'pythonpath')
+[2.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/hook/pythonpath.ps1'
+[2.513s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/hook/pythonpath.dsv'
+[2.513s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/hook/pythonpath.sh'
+[2.514s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_control/bin'
+[2.514s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(uav_control)
+[2.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/package.ps1'
+[2.516s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/package.dsv'
+[2.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/package.sh'
+[2.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/package.bash'
+[2.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_control/share/uav_control/package.zsh'
+[2.520s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/clara/ros2_ws/src/install/uav_control/share/colcon-core/packages/uav_control)
+[2.524s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/clara/ros2_ws/src/vtol_apriltag_control': PYTHONPATH=/home/clara/ros2_ws/src/build/vtol_apriltag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vtol_apriltag_control build --build-base /home/clara/ros2_ws/src/build/vtol_apriltag_control/build install --record /home/clara/ros2_ws/src/build/vtol_apriltag_control/install.log --single-version-externally-managed install_data
+[2.528s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/clara/ros2_ws/src/uav_mission': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_mission build --build-base /home/clara/ros2_ws/src/build/uav_mission/build install --record /home/clara/ros2_ws/src/build/uav_mission/install.log --single-version-externally-managed install_data
+[2.529s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/clara/ros2_ws/src/apriltag_detection': PYTHONPATH=/home/clara/ros2_ws/src/build/apriltag_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/apriltag_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/apriltag_detection build --build-base /home/clara/ros2_ws/src/build/apriltag_detection/build install --record /home/clara/ros2_ws/src/build/apriltag_detection/install.log --single-version-externally-managed install_data
+[2.545s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/clara/ros2_ws/src/uav_following': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_following/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_following/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_following build --build-base /home/clara/ros2_ws/src/build/uav_following/build install --record /home/clara/ros2_ws/src/build/uav_following/install.log --single-version-externally-managed install_data
+[3.124s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/my_dual_nodes' for CMake module files
+[3.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/clara/ros2_ws/src/my_dual_nodes' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/my_dual_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/my_dual_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_dual_nodes build --build-base /home/clara/ros2_ws/src/build/my_dual_nodes/build install --record /home/clara/ros2_ws/src/build/my_dual_nodes/install.log --single-version-externally-managed install_data
+[3.126s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/my_dual_nodes' for CMake config files
+[3.127s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/my_dual_nodes/lib'
+[3.127s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/my_dual_nodes/bin'
+[3.127s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/my_dual_nodes/lib/pkgconfig/my_dual_nodes.pc'
+[3.127s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/my_dual_nodes/lib/python3.10/site-packages'
+[3.127s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_dual_nodes', 'pythonpath')
+[3.127s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/hook/pythonpath.ps1'
+[3.128s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/hook/pythonpath.dsv'
+[3.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/hook/pythonpath.sh'
+[3.130s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/my_dual_nodes/bin'
+[3.130s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_dual_nodes)
+[3.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/package.ps1'
+[3.131s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/package.dsv'
+[3.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/package.sh'
+[3.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/package.bash'
+[3.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/my_dual_nodes/share/my_dual_nodes/package.zsh'
+[3.133s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/clara/ros2_ws/src/install/my_dual_nodes/share/colcon-core/packages/my_dual_nodes)
+[3.159s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/apriltag_detection' for CMake module files
+[3.160s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/clara/ros2_ws/src/apriltag_detection' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/apriltag_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/apriltag_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/apriltag_detection build --build-base /home/clara/ros2_ws/src/build/apriltag_detection/build install --record /home/clara/ros2_ws/src/build/apriltag_detection/install.log --single-version-externally-managed install_data
+[3.160s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/apriltag_detection' for CMake config files
+[3.161s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/apriltag_detection/lib'
+[3.161s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/apriltag_detection/bin'
+[3.161s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/apriltag_detection/lib/pkgconfig/apriltag_detection.pc'
+[3.161s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/apriltag_detection/lib/python3.10/site-packages'
+[3.162s] Level 1:colcon.colcon_core.shell:create_environment_hook('apriltag_detection', 'pythonpath')
+[3.162s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/hook/pythonpath.ps1'
+[3.163s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/hook/pythonpath.dsv'
+[3.164s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/hook/pythonpath.sh'
+[3.164s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/apriltag_detection/bin'
+[3.165s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(apriltag_detection)
+[3.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/package.ps1'
+[3.166s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/package.dsv'
+[3.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/package.sh'
+[3.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/package.bash'
+[3.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/apriltag_detection/share/apriltag_detection/package.zsh'
+[3.167s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/clara/ros2_ws/src/install/apriltag_detection/share/colcon-core/packages/apriltag_detection)
+[3.169s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/vtol_apriltag_control' for CMake module files
+[3.171s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/clara/ros2_ws/src/vtol_apriltag_control' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/vtol_apriltag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vtol_apriltag_control build --build-base /home/clara/ros2_ws/src/build/vtol_apriltag_control/build install --record /home/clara/ros2_ws/src/build/vtol_apriltag_control/install.log --single-version-externally-managed install_data
+[3.171s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/vtol_apriltag_control' for CMake config files
+[3.172s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib'
+[3.172s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/vtol_apriltag_control/bin'
+[3.172s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/pkgconfig/vtol_apriltag_control.pc'
+[3.172s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages'
+[3.172s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_apriltag_control', 'pythonpath')
+[3.173s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/hook/pythonpath.ps1'
+[3.174s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/hook/pythonpath.dsv'
+[3.174s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/hook/pythonpath.sh'
+[3.174s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/vtol_apriltag_control/bin'
+[3.174s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_apriltag_control)
+[3.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/package.ps1'
+[3.175s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/package.dsv'
+[3.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/package.sh'
+[3.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/package.bash'
+[3.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control/package.zsh'
+[3.177s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/clara/ros2_ws/src/install/vtol_apriltag_control/share/colcon-core/packages/vtol_apriltag_control)
+[3.178s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_mission' for CMake module files
+[3.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/clara/ros2_ws/src/uav_mission' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_mission build --build-base /home/clara/ros2_ws/src/build/uav_mission/build install --record /home/clara/ros2_ws/src/build/uav_mission/install.log --single-version-externally-managed install_data
+[3.179s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_mission' for CMake config files
+[3.179s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_mission/lib'
+[3.179s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_mission/bin'
+[3.179s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_mission/lib/pkgconfig/uav_mission.pc'
+[3.179s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_mission/lib/python3.10/site-packages'
+[3.180s] Level 1:colcon.colcon_core.shell:create_environment_hook('uav_mission', 'pythonpath')
+[3.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/hook/pythonpath.ps1'
+[3.180s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/hook/pythonpath.dsv'
+[3.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/hook/pythonpath.sh'
+[3.181s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_mission/bin'
+[3.181s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(uav_mission)
+[3.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/package.ps1'
+[3.182s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/package.dsv'
+[3.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/package.sh'
+[3.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/package.bash'
+[3.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_mission/share/uav_mission/package.zsh'
+[3.183s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/clara/ros2_ws/src/install/uav_mission/share/colcon-core/packages/uav_mission)
+[3.184s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_following' for CMake module files
+[3.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/clara/ros2_ws/src/uav_following' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_following/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_following/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_following build --build-base /home/clara/ros2_ws/src/build/uav_following/build install --record /home/clara/ros2_ws/src/build/uav_following/install.log --single-version-externally-managed install_data
+[3.185s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_following' for CMake config files
+[3.185s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_following/lib'
+[3.185s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_following/bin'
+[3.185s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_following/lib/pkgconfig/uav_following.pc'
+[3.185s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_following/lib/python3.10/site-packages'
+[3.185s] Level 1:colcon.colcon_core.shell:create_environment_hook('uav_following', 'pythonpath')
+[3.186s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/hook/pythonpath.ps1'
+[3.186s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/hook/pythonpath.dsv'
+[3.186s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/hook/pythonpath.sh'
+[3.187s] Level 1:colcon.colcon_core.environment:checking '/home/clara/ros2_ws/src/install/uav_following/bin'
+[3.187s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(uav_following)
+[3.187s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/package.ps1'
+[3.187s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/package.dsv'
+[3.188s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/package.sh'
+[3.188s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/package.bash'
+[3.188s] INFO:colcon.colcon_core.shell:Creating package script '/home/clara/ros2_ws/src/install/uav_following/share/uav_following/package.zsh'
+[3.188s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/clara/ros2_ws/src/install/uav_following/share/colcon-core/packages/uav_following)
+[3.189s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.189s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.189s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.189s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.194s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.194s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.194s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.210s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.211s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/clara/ros2_ws/src/install/local_setup.ps1'
+[3.212s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/clara/ros2_ws/src/install/_local_setup_util_ps1.py'
+[3.213s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/clara/ros2_ws/src/install/setup.ps1'
+[3.214s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/clara/ros2_ws/src/install/local_setup.sh'
+[3.215s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/clara/ros2_ws/src/install/_local_setup_util_sh.py'
+[3.215s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/clara/ros2_ws/src/install/setup.sh'
+[3.216s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/clara/ros2_ws/src/install/local_setup.bash'
+[3.217s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/clara/ros2_ws/src/install/setup.bash'
+[3.217s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/clara/ros2_ws/src/install/local_setup.zsh'
+[3.218s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/clara/ros2_ws/src/install/setup.zsh'

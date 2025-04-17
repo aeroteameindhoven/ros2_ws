@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: vtol_apriltag_control
+Version: 0.1.0
+Summary: VTOL UAV external flight control using AprilTags and MAVLink.
+Maintainer: Your Name
+Maintainer-email: your_email@example.com
+License: Apache-2.0
+Requires-Dist: setuptools
+Requires-Dist: pupil_apriltags
+Requires-Dist: opencv-python
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

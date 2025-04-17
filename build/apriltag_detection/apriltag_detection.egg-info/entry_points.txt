@@ -1,0 +1,2 @@
+[console_scripts]
+apriltag_detector = apriltag_detection.apriltag_detector:main

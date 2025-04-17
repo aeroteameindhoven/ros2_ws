@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>uav_landing</name>
+  <version>0.0.1</version>
+  <description>UAV speed matching and landing controller using GPS & AprilTags</description>
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>Apache License 2.0</license>
+
+  <!-- Dependencies -->
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

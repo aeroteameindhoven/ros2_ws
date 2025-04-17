@@ -1,0 +1,26 @@
+[1.267s] Invoking command in '/home/clara/ros2_ws/src/uav_control': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_control build --build-base /home/clara/ros2_ws/src/build/uav_control/build install --record /home/clara/ros2_ws/src/build/uav_control/install.log --single-version-externally-managed install_data
+[1.570s] running egg_info
+[1.588s] writing ../build/uav_control/uav_control.egg-info/PKG-INFO
+[1.588s] writing dependency_links to ../build/uav_control/uav_control.egg-info/dependency_links.txt
+[1.589s] writing entry points to ../build/uav_control/uav_control.egg-info/entry_points.txt
+[1.589s] writing requirements to ../build/uav_control/uav_control.egg-info/requires.txt
+[1.589s] writing top-level names to ../build/uav_control/uav_control.egg-info/top_level.txt
+[1.629s] reading manifest file '../build/uav_control/uav_control.egg-info/SOURCES.txt'
+[1.630s] writing manifest file '../build/uav_control/uav_control.egg-info/SOURCES.txt'
+[1.631s] running build
+[1.631s] running build_py
+[1.632s] copying uav_control/flight_controller.py -> /home/clara/ros2_ws/src/build/uav_control/build/lib/uav_control
+[1.632s] copying uav_control/__init__.py -> /home/clara/ros2_ws/src/build/uav_control/build/lib/uav_control
+[1.632s] copying uav_control/gps_follower.py -> /home/clara/ros2_ws/src/build/uav_control/build/lib/uav_control
+[1.632s] running install
+[1.639s] running install_lib
+[1.659s] running install_data
+[1.659s] copying package.xml -> /home/clara/ros2_ws/src/install/uav_control/share/uav_control
+[1.659s] running install_egg_info
+[1.678s] removing '/home/clara/ros2_ws/src/install/uav_control/lib/python3.10/site-packages/uav_control-0.0.1-py3.10.egg-info' (and everything under it)
+[1.679s] Copying ../build/uav_control/uav_control.egg-info to /home/clara/ros2_ws/src/install/uav_control/lib/python3.10/site-packages/uav_control-0.0.1-py3.10.egg-info
+[1.680s] running install_scripts
+[1.835s] Installing flight_controller script to /home/clara/ros2_ws/src/install/uav_control/lib/uav_control
+[1.836s] Installing gps_follower script to /home/clara/ros2_ws/src/install/uav_control/lib/uav_control
+[1.836s] writing list of installed files to '/home/clara/ros2_ws/src/build/uav_control/install.log'
+[1.908s] Invoked command in '/home/clara/ros2_ws/src/uav_control' returned '0': PYTHONPATH=/home/clara/ros2_ws/src/build/uav_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/clara/ros2_ws/src/install/uav_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uav_control build --build-base /home/clara/ros2_ws/src/build/uav_control/build install --record /home/clara/ros2_ws/src/build/uav_control/install.log --single-version-externally-managed install_data

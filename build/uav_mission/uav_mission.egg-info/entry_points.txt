@@ -1,0 +1,3 @@
+[console_scripts]
+apriltag_detector = uav_mission.apriltag_detector:main
+gps_follower = uav_mission.gps_follower:main

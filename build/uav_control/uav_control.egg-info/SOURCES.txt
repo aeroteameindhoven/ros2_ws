@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../build/uav_control/uav_control.egg-info/PKG-INFO
+../build/uav_control/uav_control.egg-info/SOURCES.txt
+../build/uav_control/uav_control.egg-info/dependency_links.txt
+../build/uav_control/uav_control.egg-info/entry_points.txt
+../build/uav_control/uav_control.egg-info/requires.txt
+../build/uav_control/uav_control.egg-info/top_level.txt
+../build/uav_control/uav_control.egg-info/zip-safe
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+uav_control/__init__.py
+uav_control/flight_controller.py
+uav_control/gps_follower.py

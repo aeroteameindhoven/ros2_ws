@@ -1,0 +1,26 @@
+running egg_info
+writing ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/PKG-INFO
+writing dependency_links to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/dependency_links.txt
+writing entry points to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/entry_points.txt
+writing requirements to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/requires.txt
+writing top-level names to ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/top_level.txt
+reading manifest file '../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/SOURCES.txt'
+writing manifest file '../build/vtol_apriltag_control/vtol_apriltag_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying vtol_apriltag_control/apriltag_detector.py -> /home/clara/ros2_ws/src/build/vtol_apriltag_control/build/lib/vtol_apriltag_control
+copying vtol_apriltag_control/flight_controller.py -> /home/clara/ros2_ws/src/build/vtol_apriltag_control/build/lib/vtol_apriltag_control
+copying vtol_apriltag_control/__init__.py -> /home/clara/ros2_ws/src/build/vtol_apriltag_control/build/lib/vtol_apriltag_control
+running install
+running install_lib
+running install_data
+copying resource/vtol_apriltag_control -> /home/clara/ros2_ws/src/install/vtol_apriltag_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control
+copying launch/vtol_control.launch.py -> /home/clara/ros2_ws/src/install/vtol_apriltag_control/share/vtol_apriltag_control
+running install_egg_info
+removing '/home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages/vtol_apriltag_control-0.1.0-py3.10.egg-info' (and everything under it)
+Copying ../build/vtol_apriltag_control/vtol_apriltag_control.egg-info to /home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/python3.10/site-packages/vtol_apriltag_control-0.1.0-py3.10.egg-info
+running install_scripts
+Installing apriltag_detector script to /home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/vtol_apriltag_control
+Installing flight_controller script to /home/clara/ros2_ws/src/install/vtol_apriltag_control/lib/vtol_apriltag_control
+writing list of installed files to '/home/clara/ros2_ws/src/build/vtol_apriltag_control/install.log'
