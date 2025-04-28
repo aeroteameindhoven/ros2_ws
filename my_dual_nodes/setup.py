@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'my_dual_nodes'
+package_name = 'dual_uav_pid'
 
 setup(
     name=package_name,
@@ -16,8 +16,8 @@ setup(
     license='Apache License 2.0',
     entry_points={
         'console_scripts': [
-            'script1 = my_dual_nodes.script1:main',
-            'script2 = my_dual_nodes.script2:main',
+            'script1 = dual_uav_pid.script1:main',
+            'script2 = dual_uav_pid.script2:main',
         ],
     },
     data_files=[
