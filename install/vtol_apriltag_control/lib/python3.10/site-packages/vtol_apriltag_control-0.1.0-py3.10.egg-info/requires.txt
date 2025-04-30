@@ -1,3 +1,0 @@
-setuptools
-pupil_apriltags
-opencv-python

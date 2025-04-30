@@ -5,20 +5,43 @@ from std_msgs.msg import String
 from pymavlink import mavutil
 from geopy.distance import geodesic
 import time
+import csv
+import os
 
 class UAV2Node(Node):
     def __init__(self):
         super().__init__('uav2_node')
         self.serial_path = '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A906H62E-if00-port0'
         self.vehicle = None
-        self.fixed_alt = 10.0
+        self.fixed_alt = 20.0
         self.target_distance = 20.0  # meters behind
         self.kp = 1.0
         self.base_speed = 16.0  # default speed
         self.start_time = time.time()
         self.control_start_time = None
 
+        self.log_filename = "uav2_control_log.csv"
+        self.init_logger_file()
+
         self.connect_vehicle()
+
+    def init_logger_file(self):
+        # Create CSV and write header
+        if not os.path.exists(self.log_filename):
+            with open(self.log_filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Timestamp', 'Distance_m', 'Error_m', 'TargetAirspeed_mps', 'ActualAirspeed_mps'])
+
+    def log_to_file(self, distance, error, target_airspeed, actual_airspeed):
+        with open(self.log_filename, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([
+                time.strftime("%Y-%m-%d %H:%M:%S"),
+                f"{distance:.2f}",
+                f"{error:.2f}",
+                f"{target_airspeed:.2f}",
+                f"{actual_airspeed:.2f}"
+            ])
 
     def connect_vehicle(self):
         try:
@@ -69,19 +92,24 @@ class UAV2Node(Node):
                 airspeed_cmd = self.base_speed + correction
                 airspeed_cmd = max(14.0, min(20.0, airspeed_cmd))
 
+                # Send airspeed command
                 self.vehicle._master.mav.command_long_send(
                     self.vehicle._master.target_system,
                     self.vehicle._master.target_component,
                     mavutil.mavlink.MAV_CMD_DO_CHANGE_SPEED,
                     0,
-                    0,  # airspeed
+                    0,  # 0 = airspeed
                     airspeed_cmd,
                     -1, 0, 0, 0, 0
                 )
 
+                actual_airspeed = self.vehicle.airspeed or 0.0
                 self.get_logger().info(
-                    f"[UAV2] Dist: {horizontal_distance:.1f} m | Cmd AS: {airspeed_cmd:.1f} m/s"
+                    f"[UAV2] Dist: {horizontal_distance:.1f} m | Cmd AS: {airspeed_cmd:.1f} m/s | Actual AS: {actual_airspeed:.1f} m/s"
                 )
+
+                # Log to CSV
+                self.log_to_file(horizontal_distance, error, airspeed_cmd, actual_airspeed)
 
             # Always GoTo
             target = LocationGlobalRelative(lat, lon, self.fixed_alt)

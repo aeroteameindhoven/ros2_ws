@@ -1,2 +1,0 @@
-Invoking command in '/home/clara/ros2_ws/src/build/uav_control': /usr/bin/cmake /home/clara/ros2_ws/src/uav_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/clara/ros2_ws/src/install/uav_control
-Invoked command in '/home/clara/ros2_ws/src/build/uav_control' returned '1': /usr/bin/cmake /home/clara/ros2_ws/src/uav_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/clara/ros2_ws/src/install/uav_control

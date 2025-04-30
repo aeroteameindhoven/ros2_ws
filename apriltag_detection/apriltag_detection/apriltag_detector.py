@@ -4,6 +4,8 @@ from tf2_msgs.msg import TFMessage
 from geometry_msgs.msg import PoseStamped
 import numpy as np
 from scipy.spatial.transform import Rotation
+from apriltag_interfaces.msg import TagPoseStamped  # Your custom message
+
 
 class AprilTagPoseManualTransform(Node):
     def __init__(self):
@@ -16,54 +18,60 @@ class AprilTagPoseManualTransform(Node):
             10
         )
 
-        self.publisher = self.create_publisher(PoseStamped, '/apriltag/pose_in_base', 10)
+        self.publisher = self.create_publisher(TagPoseStamped, '/apriltag/pose_in_base', 10)
 
         # Static transform: camera -> base_link
         self.t_cam_in_base = np.array([0, -0.2, 0])
         self.R_cam_in_base = Rotation.from_euler('x', -25, degrees=True).as_matrix()
 
-        self.get_logger().info('🧠 Manual AprilTag Transformer running — no TF used.')
+        self.get_logger().info('🧠 Manual AprilTag Transformer running — with tag ID included.')
 
     def tf_callback(self, msg):
         for transform in msg.transforms:
-            if transform.child_frame_id != 'tag36h11:0':
-                continue
+            tag_id = None
 
-            # Tag position in camera frame
+            # Replace these with your actual frame names
+            if transform.child_frame_id == 'big':
+                tag_id = 0
+            elif transform.child_frame_id == 'small':
+                tag_id = 1
+            else:
+                continue  # Skip unrelated transforms
+
+            # Position in camera frame
             t = transform.transform.translation
             p_camera = np.array([t.x, t.y, t.z])
-
-            # Transform into base_link frame
             p_base = self.R_cam_in_base @ p_camera + self.t_cam_in_base
 
-            # Orientation stays the same for now (we’ll rotate it manually too if needed)
+            # Orientation
             q = transform.transform.rotation
             q_camera = np.array([q.x, q.y, q.z, q.w])
-
-            # Rotate orientation to base_link frame
             r_camera = Rotation.from_quat(q_camera)
             r_base = Rotation.from_matrix(self.R_cam_in_base @ r_camera.as_matrix())
-            q_base = r_base.as_quat()  # [x, y, z, w]
+            q_base = r_base.as_quat()
 
-            # Create new PoseStamped
+            # Fill PoseStamped
             pose = PoseStamped()
             pose.header.stamp = transform.header.stamp
             pose.header.frame_id = 'base_link'
-
             pose.pose.position.x = p_base[0]
             pose.pose.position.y = p_base[1]
             pose.pose.position.z = p_base[2]
-
             pose.pose.orientation.x = q_base[0]
             pose.pose.orientation.y = q_base[1]
             pose.pose.orientation.z = q_base[2]
             pose.pose.orientation.w = q_base[3]
 
-            self.publisher.publish(pose)
+            # Fill and publish custom message
+            tag_msg = TagPoseStamped()
+            tag_msg.id = tag_id
+            tag_msg.pose = pose
+            self.publisher.publish(tag_msg)
 
             self.get_logger().info(
-                f'📍 Tag in base_link: x={p_base[0]:.2f}, y={p_base[1]:.2f}, z={p_base[2]:.2f}'
+                f'📍 Tag {tag_id} in base_link: x={p_base[0]:.2f}, y={p_base[1]:.2f}, z={p_base[2]:.2f}'
             )
+
 
 def main(args=None):
     rclpy.init(args=args)
