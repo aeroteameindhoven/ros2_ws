@@ -4,7 +4,7 @@ from tf2_msgs.msg import TFMessage
 from geometry_msgs.msg import PoseStamped
 import numpy as np
 from scipy.spatial.transform import Rotation
-from apriltag_interfaces.msg import TagPoseStamped  # Your custom message
+from apriltag_interfaces.msg import TagPoseStamped
 
 
 class AprilTagPoseManualTransform(Node):
@@ -20,28 +20,49 @@ class AprilTagPoseManualTransform(Node):
 
         self.publisher = self.create_publisher(TagPoseStamped, '/apriltag/pose_in_base', 10)
 
-        # Static transform: camera -> base_link
+        # Static transform from camera to base_link
         self.t_cam_in_base = np.array([0, -0.2, 0])
-        self.R_cam_in_base = Rotation.from_euler('x', -25, degrees=True).as_matrix()
+        self.R_cam_in_base = Rotation.from_euler('x', -35, degrees=True).as_matrix()
 
-        self.get_logger().info('🧠 Manual AprilTag Transformer running — with tag ID included.')
+        # Per-tag positional offsets (in meters)
+        self.tag_offsets = {
+            0: np.array([0.0, 0.0, 0.0]),
+            1: np.array([0.0, 0.0, 0.56]),
+            2: np.array([0.0, 0.0, 0.30]),
+            3: np.array([0.165, 0.0, -0.23]),
+            4: np.array([0.0, 0.0, -0.24]),
+        }
+
+        self.get_logger().info('🧠 Manual AprilTag Transformer running — with per-tag offsets.')
 
     def tf_callback(self, msg):
         for transform in msg.transforms:
             tag_id = None
 
-            # Replace these with your actual frame names
-            if transform.child_frame_id == 'big':
+            # Match known tag frame names to IDs
+            if transform.child_frame_id == 'zero':
                 tag_id = 0
-            elif transform.child_frame_id == 'small':
+            elif transform.child_frame_id == 'one':
                 tag_id = 1
+            elif transform.child_frame_id == 'two':
+                tag_id = 2
+            elif transform.child_frame_id == 'three':
+                tag_id = 3
+            elif transform.child_frame_id == 'four':
+                tag_id = 4
             else:
-                continue  # Skip unrelated transforms
+                continue
 
             # Position in camera frame
             t = transform.transform.translation
             p_camera = np.array([t.x, t.y, t.z])
+
+            # Rotate into base_link frame
             p_base = self.R_cam_in_base @ p_camera + self.t_cam_in_base
+
+            # Apply per-tag positional offset
+            if tag_id in self.tag_offsets:
+                p_base += self.tag_offsets[tag_id]
 
             # Orientation
             q = transform.transform.rotation
