@@ -422,7 +422,7 @@ class GpsFollower(Node):
                 self.get_logger().info(
                     f"[{tag_source}] Phase: {flight_phase} | Dist: {dist_to_target:.2f}m | TgtAS: {target_airspeed:.2f} | AS: {airspeed:.2f} | "
                     f"Alt: {altitude:.2f} | Throttle: {throttle_cmd:.2f} | Pitch(deg): {math.degrees(pitch_cmd):.2f} | "
-                    f"Lateral Offset: {lateral_error:.2f}m |"
+                    f"Lateral Offset: {lateral_error:.2f}m | Altitude error: {altitude_error:.2f}m |"
                     f"TagHeight: {tag_height_str} | Heading Car: {math.degrees(self.last_car_heading):.2f}° | TagLateral: {tag_lateral_str} | DemandedHeight: {desired_height} |"
                 )
             log_counter += 1
