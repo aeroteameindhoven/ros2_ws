@@ -7,18 +7,29 @@ from geopy.distance import geodesic
 import time
 import csv
 import os
+from apriltag_interfaces.msg import TagPoseStamped
 
 class UAV2Node(Node):
     def __init__(self):
         super().__init__('uav2_node')
         self.serial_path = '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A906H62E-if00-port0'
         self.vehicle = None
-        self.fixed_alt = 20.0
-        self.target_distance = 20.0  # meters behind
+        self.fixed_alt = 10.0
+        self.target_distance = 15.0  # meters behind
         self.kp = 1.0
         self.base_speed = 16.0  # default speed
         self.start_time = time.time()
         self.control_start_time = None
+        self.latest_apriltag = None
+        self.last_apriltag_time = 0.0
+
+        self.latest_tags = {}  # Dict of {id: (pose, timestamp)}
+        self.create_subscription(
+            TagPoseStamped,
+            '/apriltag/pose_in_base',
+            self.apriltag_callback,
+            10
+        )
 
         self.log_filename = "uav2_control_log.csv"
         self.init_logger_file()
@@ -31,6 +42,10 @@ class UAV2Node(Node):
             with open(self.log_filename, mode='w', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow(['Timestamp', 'Distance_m', 'Error_m', 'TargetAirspeed_mps', 'ActualAirspeed_mps'])
+
+    def apriltag_callback(self, msg: TagPoseStamped):
+        tag_id = msg.id if hasattr(msg, 'id') else 0
+        self.latest_tags[tag_id] = (msg.pose.pose, time.time())
 
     def log_to_file(self, distance, error, target_airspeed, actual_airspeed):
         with open(self.log_filename, mode='a', newline='') as file:
@@ -46,7 +61,7 @@ class UAV2Node(Node):
     def connect_vehicle(self):
         try:
             self.get_logger().info(f"[UAV2] Connecting to {self.serial_path}...")
-            self.vehicle = connect(self.serial_path, wait_ready=True, baud=57600)
+            self.vehicle = connect('udpout:127.0.1:14550')
             self.get_logger().info(f"[UAV2] Connected! Firmware: {self.vehicle.version}")
 
             self.subscription = self.create_subscription(
@@ -81,12 +96,38 @@ class UAV2Node(Node):
             horizontal_distance = geodesic((uav_lat, uav_lon), (lat, lon)).meters
 
             now = time.time()
+            selected_pose = None
+            # --- AprilTag priority check ---
+            for tag_id in [0, 1]:  # ID priority list
+                pose, t = self.latest_tags.get(tag_id, (None, 0.0))
+                if pose and (now - t < 0.5):
+                    selected_pose = pose
+                    self.get_logger().info(f"[UAV2] Using AprilTag ID {tag_id}")
+                    self.get_logger().info("[MODE] Control source: AprilTag")
+                    break
+
+            if selected_pose:
+                tag_dist = selected_pose.position.z
+                error = tag_dist - self.target_distance
+                correction = self.kp * error
+                airspeed_cmd = self.base_speed + correction
+                airspeed_cmd = max(14.0, min(20.0, airspeed_cmd))
+
+                actual_airspeed = self.vehicle.airspeed or 0.0
+                self.get_logger().info(
+                    f"[UAV2][Tag] Dist: {tag_dist:.1f} m | Cmd AS: {airspeed_cmd:.1f} | AS: {actual_airspeed:.1f}"
+                )
+
+                self.log_to_file(tag_dist, error, airspeed_cmd, actual_airspeed)
+                return  # ✅ Skip GPS follow
+
             elapsed_total = now - self.start_time
 
             if self.control_start_time is None and elapsed_total >= 3.0:
                 self.control_start_time = now
 
             if self.control_start_time is not None:
+                self.get_logger().info("[MODE] Control source: GPS")
                 error = horizontal_distance - self.target_distance
                 correction = self.kp * error
                 airspeed_cmd = self.base_speed + correction

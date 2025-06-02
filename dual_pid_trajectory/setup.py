@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'dual_uav_pid'
+package_name = 'dual_pid_trajectory'
 
 setup(
     name=package_name,
@@ -16,11 +16,10 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'uav1_node = dual_uav_pid.uav1_node:main',
-            'uav2_node = dual_uav_pid.uav2_node:main',
+            'uav2_node = dual_pid_trajectory.uav2_node:main',
         ],
     },
     data_files=[
-        (os.path.join('share', package_name, 'launch'), glob('dual_uav_pid/launch/*.launch.py')),
+        (os.path.join('share', package_name, 'launch'), glob('dual_pid_trajectory/launch/*.launch.py')),
     ],
 )

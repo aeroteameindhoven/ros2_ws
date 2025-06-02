@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>dual_uav_pid</name>
+  <name>dual_pid_docking</name>
   <version>0.1.0</version>
   <description>Dual UAV connection via DroneKit using ROS 2</description>
   <maintainer email="clara@example.com">Clara</maintainer>
