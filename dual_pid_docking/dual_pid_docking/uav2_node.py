@@ -68,18 +68,19 @@ class GpsFollower(Node):
         self.start_time = self.last_time
         self.latest_tags = {}
         self.in_trajectory_phase = False
-        self.trajectory_duration = 15.0
+        self.trajectory_duration = 0.0
         self.trajectory_hold_duration = 50.0
         self.trajectory_started = False
         self.trajectory_start_time = None
         self.distance_under_threshold_time = None
-        self.distance_trigger_threshold = 8.0
-        self.wait_before_trajectory = 0.0  # seconds under threshold before starting
+        self.distance_trigger_threshold = 0.0
+        self.wait_before_trajectory = 500.0  # seconds under threshold before starting
         load_trajectory = pd.read_csv('/home/cam_ws/src/dual_pid_docking/dual_pid_docking/Z_trajectory7_4to2in10s_freq100.csv')
         self.vertical_trajectory = load_trajectory.values
         self.trajectory_counter = 0
-        self.trajectory_hold_height = 2.0
+        self.trajectory_hold_height = 8.0
         self.car_height = 1.76
+        self.stale_window = 1.5
 
         # PID controllers
         self.airspeed_pid = PID(kp=0.08, ki=0.04, kd=0.0, integral_limit=5.0)
@@ -92,7 +93,7 @@ class GpsFollower(Node):
         self.log_actual_distance = []
         self.log_altitude = []
         self.log_lateral_offset = []
-        self.log_tag_height = []  # CV-estimated height from tag (pose.position.y)
+        self.log_tag_height = []  # CV-estimated height from tag (pose.position.x)
         self.last_car_heading = math.radians(255.0)  # default/fallback value
 
         self.target_lat = None
@@ -279,7 +280,6 @@ class GpsFollower(Node):
             use_pose = None
             tag_source = "GPS"
             valid_time_window = 1.0  # seconds
-            stale_window = 3.0       # extended stale fallback
 
             # --- Collect tag data (pose, timestamp) ---
             tag_data = [(id, *self.latest_tags.get(id, (None, 0.0))) for id in [4, 3, 2, 1, 0]]
@@ -296,7 +296,7 @@ class GpsFollower(Node):
                 # sort by freshest timestamp first
                 tag_data_sorted = sorted(tag_data, key=lambda x: x[2], reverse=True)
                 for tag_id, pose, t in tag_data_sorted:
-                    if now - t < stale_window:
+                    if now - t < self.stale_window:
                         use_pose = pose
                         tag_source = f"Stale AprilTag ID {tag_id}"
                         break
@@ -340,26 +340,31 @@ class GpsFollower(Node):
                     desired_height = self.trajectory_hold_height
             
             if in_hold_phase:
-                self.attitude_pid.kp = 0.01
+                self.stale_window = 10.0
+                self.altitude_pid.kp = 0.01
                 desired_height = 1.0
+            else:
+                self.stale_window = 1.5
 
             if use_pose is not None:
-                positive_height = -1 * use_pose.pose.position.x
+                positive_height = -1*use_pose.pose.position.x
                 self.distance_pid.kp = 0.2  # Lower gain when tag is seen
-		spoofed_forward_distance = 500 # Not accepted anymore, just here to make the l1 command work
+                spoofed_forward_distance = 500 # Not accepted anymore, just here to make the l1 command work
+                altitude = self.car_height + positive_height
                 if self.prev_tag_source != tag_source:
                     self.distance_pid.integral = 0.0
                     self.distance_pid.last_error = 0.0
                 lateral_error = use_pose.pose.position.y
-		self.send_custom_l1_external_nav(float(lateral_error), float(spoofed_forward_distance), 1)
+                self.send_custom_l1_external_nav(float(lateral_error), float(spoofed_forward_distance), 1)
                 if desired_height is None:
-                    altitude_error = self.fixed_altitude - (self.car_height + positive_height)
+                    altitude_error = self.fixed_altitude - altitude
                 else:
                     altitude_error = desired_height - positive_height
                 distance_error = use_pose.pose.position.z - desired_distance
                 dist_to_target = use_pose.pose.position.z
             else:
                 tag_source = "GPS"
+                altitude = self.vehicle.location.global_relative_frame.alt or 0.0
                 if self.last_lat is not None and self.last_lon is not None:
                     dist_to_target = geodesic((self.uav_lat, self.uav_lon), (self.last_lat, self.last_lon)).meters
 
@@ -396,8 +401,8 @@ class GpsFollower(Node):
                 else:
                     self.log_lateral_offset.append(None)
             
-            tag_height_str = f"{use_pose.pose.position.y:.2f}m" if use_pose is not None else "N/A"
-            tag_lateral_str = f"{use_pose.pose.position.x:.2f}m" if use_pose is not None else "N/A"
+            tag_height_str = f"{positive_height:.2f}m" if use_pose is not None else "N/A"
+            tag_lateral_str = f"{use_pose.pose.position.y:.2f}m" if use_pose is not None else "N/A"
 
             #--- Attitude Command ---#
             q = euler_to_quaternion(0.0, pitch_cmd, 0.0)

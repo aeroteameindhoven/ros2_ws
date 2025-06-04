@@ -60,7 +60,7 @@ class GpsFollower(Node):
 
         self.last_apriltag_time = 0.0
         self.latest_apriltag_pose = None
-        self.fixed_altitude = 40.0
+        self.fixed_altitude = 15.0
         self.last_lat, self.last_lon = None, None
         self.uav_lat, self.uav_lon = None, None
         self.prev_tag_source = "GPS"
@@ -78,7 +78,7 @@ class GpsFollower(Node):
         load_trajectory = pd.read_csv('/home/cam_ws/src/dual_pid_docking/dual_pid_docking/Z_trajectory7_4to2in10s_freq100.csv')
         self.vertical_trajectory = load_trajectory.values
         self.trajectory_counter = 0
-        self.trajectory_hold_height = 40.0
+        self.trajectory_hold_height = 15.0
         self.car_height = 1.76
 
         # PID controllers
