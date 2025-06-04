@@ -6,10 +6,13 @@ source /opt/ros/humble/setup.bash
 source /home/cam_ws/install/setup.bash
 
 echo "Starting v4l2_camera_node on /dev/video8..."
-ros2 run v4l2_camera v4l2_camera_node \
-  --ros-args \
+ros2 run v4l2_camera v4l2_camera_node --ros-args \
   -p video_device:=/dev/video8 \
   -p camera_info_url:=file:///home/cam_ws/camera_calib3.yaml \
+  -p auto_exposure:=1 \
+  -p exposure_time_absolute:=100 \
+  -p image_size:=[960,600] \
+  -p time_per_frame:=[1,80] \
   -r image_raw:=/camera/image_raw \
   -r camera_info:=/camera/camera_info &
 
