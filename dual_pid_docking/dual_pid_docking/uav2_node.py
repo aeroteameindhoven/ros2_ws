@@ -94,7 +94,16 @@ class GpsFollower(Node):
         self.log_altitude = []
         self.log_lateral_offset = []
         self.log_tag_height = []  # CV-estimated height from tag (pose.position.x)
-        self.last_car_heading = math.radians(255.0)  # default/fallback value
+        self.log_flight_phase = []
+        self.log_source = []
+        self.log_alt_error = []
+        self.log_airspeed = []
+        self.log_airspeed_error = []
+        self.log_thrust = []
+        self.log_pitch = []
+        self.log_demanded_height = []
+        self.log_car_heading = []
+
 
         self.target_lat = None
         self.target_lon = None
@@ -396,10 +405,16 @@ class GpsFollower(Node):
                 self.log_distance_error.append(distance_error)
                 self.log_actual_distance.append(dist_to_target)
                 self.log_altitude.append(altitude)
-                if in_trajectory_phase or in_hold_phase:
-                    self.log_lateral_offset.append(lateral_error)
-                else:
-                    self.log_lateral_offset.append(None)
+                self.log_lateral_offset.append(lateral_error)
+                self.log_source.append(tag_source)
+                self.log_alt_error.append(altitude_error)
+                self.log_airspeed.append(airspeed)
+                self.log_airspeed_error.append(airspeed_error)
+                self.log_thrust.append(throttle_cmd)
+                self.log_pitch.append(pitch_cmd)
+                self.log_demanded_height.append(desired_height)
+                self.log_car_heading.append(math.degrees(self.last_car_heading))
+
             
             tag_height_str = f"{positive_height:.2f}m" if use_pose is not None else "N/A"
             tag_lateral_str = f"{use_pose.pose.position.y:.2f}m" if use_pose is not None else "N/A"
@@ -431,7 +446,11 @@ class GpsFollower(Node):
                     f"TagHeight: {tag_height_str} | Heading Car: {math.degrees(self.last_car_heading):.2f}° | TagLateral: {tag_lateral_str} | DemandedHeight: {desired_height} |"
                 )
             log_counter += 1
-            
+
+            if math.isfinite(altitude):
+                self.log_flight_phase.append(flight_phase)
+                self.log_tag_height.append(tag_height_str)
+
             time.sleep(0.01)
 
 
@@ -457,12 +476,12 @@ def main(args=None):
     finally:
         gps_follower.destroy_node()
 
-        csv_filename = "lateral_offset_data.csv"
+        csv_filename = "Logs_data.csv"
         with open(csv_filename, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(["Time (s)", "Lateral Offset (m)", "car heading"])
-            for t, offset in zip(gps_follower.log_time, gps_follower.log_lateral_offset):
-                writer.writerow([t, offset])
+            writer.writerow(["Time (s)", "Phase", "Source", "Distance to car (m)", "Distance error (m)", "Airspeed (m/s)", "Airspeed error (m/s)", "Throttle", "Altitude (m)", "Altitude error (m)", "Pitch", "Lateral Offset GPS/Tag (m)", "Tag height (m)", "Demanded height (m)", "Car heading (degrees)"])
+            for t, phase, source, distance, distanceerror, airspd, airspderror, thrust, alt, alterror, pitch, offset, tagheight, demheight, carhead in zip(gps_follower.log_time, gps_follower.log_flight_phase, gps_follower.log_source, gps_follower.log_actual_distance, gps_follower.log_distance_error, gps_follower.log_airspeed, gps_follower.log_airspeed_error, gps_follower.log_thrust, gps_follower.log_altitude, gps_follower.log_alt_error, gps_follower.log_pitch, gps_follower.log_lateral_offset, gps_follower.log_tag_height, gps_follower.log_demanded_height, gps_follower.log_car_heading):
+                writer.writerow([t, phase, source, distance, distanceerror, airspd, airspderror, thrust, alt, alterror, pitch, offset, tagheight, demheight, carhead])
         print(f"✅ CSV saved to: {os.path.abspath(csv_filename)}")
 
 if __name__ == '__main__':
