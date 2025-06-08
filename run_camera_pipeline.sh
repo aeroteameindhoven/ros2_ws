@@ -29,7 +29,7 @@ echo "Starting v4l2_camera_node on /dev/video8..."
 
 ros2 run v4l2_camera v4l2_camera_node --ros-args \
   -p video_device:=/dev/v4l/by-id/usb-Arducam_Arducam_B0495__USB3_2.3MP__Arducam_20231205_0001-video-index0 \
-  -p camera_info_url:=file:///home/cam_ws/camera_calib3.yaml \
+  -p camera_info_url:=file:///home/cam_ws/camera_calibplane.yaml \
   -p auto_exposure:=1 \
   -p exposure_time_absolute:=330 \
   -p image_size:=[960,600] \
