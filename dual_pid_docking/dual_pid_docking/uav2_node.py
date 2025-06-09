@@ -315,7 +315,7 @@ class GpsFollower(Node):
             desired_distance = 0
             desired_height = None
             if use_pose and not self.trajectory_started:
-                if use_pose.pose.position.z < self.distance_trigger_threshold:
+                if use_pose.pose.position.x < self.distance_trigger_threshold:
                     if self.distance_under_threshold_time is None:
                         self.distance_under_threshold_time = now
                     elif now - self.distance_under_threshold_time > self.wait_before_trajectory:
@@ -356,7 +356,7 @@ class GpsFollower(Node):
                 self.stale_window = 1.5
 
             if use_pose is not None:
-                positive_height = -1*use_pose.pose.position.x
+                positive_height = use_pose.pose.position.z
                 self.distance_pid.kp = 0.2  # Lower gain when tag is seen
                 spoofed_forward_distance = 500 # Not accepted anymore, just here to make the l1 command work
                 altitude = self.car_height + positive_height
@@ -369,8 +369,8 @@ class GpsFollower(Node):
                     altitude_error = self.fixed_altitude - altitude
                 else:
                     altitude_error = desired_height - positive_height
-                distance_error = use_pose.pose.position.z - desired_distance
-                dist_to_target = use_pose.pose.position.z
+                distance_error = use_pose.pose.position.x - desired_distance
+                dist_to_target = use_pose.pose.position.x
             else:
                 tag_source = "GPS"
                 altitude = self.vehicle.location.global_relative_frame.alt or 0.0
