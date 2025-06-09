@@ -22,7 +22,7 @@ class AprilTagPoseManualTransform(Node):
 
         # Static transform from camera to base_link
         self.t_cam_in_base = np.array([0, 0, 0])
-        self.R_cam_in_base = Rotation.from_euler('y', -40, degrees=True).as_matrix()
+        self.R_cam_in_base = Rotation.from_euler('y', 25, degrees=True).as_matrix()
 
         # Per-tag positional offsets (in meters)
         self.tag_offsets = {
