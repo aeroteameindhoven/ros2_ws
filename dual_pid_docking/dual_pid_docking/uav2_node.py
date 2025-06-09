@@ -8,12 +8,12 @@ from pymavlink import mavutil
 from geopy.distance import geodesic
 import math
 import threading
-import matplotlib.pyplot as plt
 import csv
 import os
 from std_msgs.msg import String  # At the top of your file
 import pandas as pd
 from apriltag_interfaces.msg import TagPoseStamped  # Your custom message
+from datetime import datetime
 
 # --- PID Controller ---
 class PID:
@@ -55,7 +55,7 @@ class GpsFollower(Node):
 
         self.create_subscription(String, 'uav1/location', self.location_callback, 10)
         self.create_subscription(TagPoseStamped, '/apriltag/pose_in_base', self.apriltag_callback, 10)
-        self.serial_path = 'udpout:127.0.1:14550'
+        self.serial_path = '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A906H62E-if00-port0'
         self.connect_vehicle()
 
         self.last_apriltag_time = 0.0
@@ -127,7 +127,7 @@ class GpsFollower(Node):
 
     def connect_vehicle(self):
         self.get_logger().info(f"Connecting to vehicle at {self.serial_path}...")
-        self.vehicle = connect(self.serial_path)
+        self.vehicle = connect(self.serial_path, baud=1_500_000)
         self.get_logger().info(f"Connected! Firmware: {self.vehicle.version}")
 
 
@@ -476,7 +476,8 @@ def main(args=None):
     finally:
         gps_follower.destroy_node()
 
-        csv_filename = "Logs_data.csv"
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        csv_filename = f"Logs_data_{timestamp}.csv"
         with open(csv_filename, mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["Time (s)", "Phase", "Source", "Distance to car (m)", "Distance error (m)", "Airspeed (m/s)", "Airspeed error (m/s)", "Throttle", "Altitude (m)", "Altitude error (m)", "Pitch", "Lateral Offset GPS/Tag (m)", "Tag height (m)", "Demanded height (m)", "Car heading (degrees)"])

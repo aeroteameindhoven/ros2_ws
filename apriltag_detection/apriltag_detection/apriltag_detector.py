@@ -26,11 +26,11 @@ class AprilTagPoseManualTransform(Node):
 
         # Per-tag positional offsets (in meters)
         self.tag_offsets = {
-            0: np.array([0.15, 0.0, 0.64]),
-            1: np.array([0.0, 0.0, 0.15]),
-            2: np.array([0.0, 0.0, -0.11]),
-            3: np.array([0.0, -0.165, -0.64]),
-            4: np.array([0.0, 0.0, -0.65]),
+            0: np.array([0.74, 0.0, -0.15]),
+            1: np.array([0.25, 0.0, 0.0]),
+            2: np.array([-0.01, 0.0, 0.0]),
+            3: np.array([-0.54, -0.165, 0.0]),
+            4: np.array([-0.55, 0.0, 0.0]),
         }
 
         self.get_logger().info('🧠 Manual AprilTag Transformer running — with per-tag offsets.')
@@ -56,6 +56,11 @@ class AprilTagPoseManualTransform(Node):
             # Position in camera frame
             t = transform.transform.translation
             p_camera = np.array([t.x, t.y, t.z])
+
+            self.get_logger().info(
+                f'Tag {tag_id} before rotation- x={p_camera[0]:.2f}, y={p_camera[1]:.2f}, z={p_camera[2]:.2f}'
+            )
+
 
             # Rotate into base_link frame
             p_base = self.R_cam_in_base @ p_camera + self.t_cam_in_base

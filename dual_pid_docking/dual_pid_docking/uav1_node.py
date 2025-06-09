@@ -8,7 +8,7 @@ class UAV1Node(Node):
     def __init__(self):
         super().__init__('uav1_node')
         self.publisher = self.create_publisher(String, 'uav1/location', 10)
-        self.serial_path = 'udpout:127.0.0.1:14551'
+        self.serial_path = '/dev/serial/by-id/usb-FTDI_FT231X_USB_UART_D30I5PMQ-if00-port0'
         self.vehicle: Vehicle = None
         self.connecting = False
 
@@ -20,7 +20,7 @@ class UAV1Node(Node):
         try:
             self.connecting = True
             self.get_logger().info(f"[UAV1] Connecting to {self.serial_path}...")
-            self.vehicle = connect('udpout:127.0.0.1:14551')
+            self.vehicle = connect(self.serial_path, baud=57600)
             self.get_logger().info(f"[UAV1] Connected with firmware: {self.vehicle.version}")
         except Exception as e:
             self.vehicle = None
@@ -50,9 +50,12 @@ class UAV1Node(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = UAV1Node()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
 
 if __name__ == '__main__':
     main()
